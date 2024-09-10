@@ -13,7 +13,7 @@ permissions: write-all
 
 jobs:
   Build:
-    runs-on: ubuntu-latest
+    runs-on: macos-13
     steps:
     - name: Checkout Repo
       uses: actions/checkout@v3
