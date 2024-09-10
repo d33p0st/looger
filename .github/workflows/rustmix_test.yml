@@ -34,7 +34,11 @@ jobs:
         conda activate rustmix
 
     - name: Install maturin
-      run: pip install maturin
+      run: |
+        conda activate rustmix
+        pip install maturin
 
     - name: Run build test for rust
-      run: maturin develop
+      run: |
+        conda activate rustmix
+        maturin develop
