@@ -30,7 +30,7 @@ jobs:
 
     - name: Activate Env
       run: |
-        source ~/.bashrc
+        source ~/.profile
         conda activate rustmix
 
     - name: Install Dependencies from the env
