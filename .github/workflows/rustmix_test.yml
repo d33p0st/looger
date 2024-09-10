@@ -1,4 +1,4 @@
-name: Rust
+name: Rust Mix Test
 
 on:
   push:
@@ -16,11 +16,26 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Set up Python
-      uses: actions/setup-python@v3
+
+    - name: Set up Miniconda
+      uses: goanpeca/setup-miniconda@v1
       with:
-        python-version: '3.12'
+        auto-update-conda: true
+        python-version: 3.12
+
+    - name: Create Environment
+      run: conda create --name rustmix python=3.12
+
+    - name: Activate Env
+      run: |
+        source ~/.bashrc
+        conda activate rustmix
+
+    - name: Install Dependencies from the env
+      run: conda env update --file environment.yml --name myenv
+
     - name: Install maturin
       run: pip install maturin
+
     - name: Run build test for rust
       run: maturin develop
