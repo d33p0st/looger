@@ -24,7 +24,7 @@ jobs:
         python-version: 3.12
 
     - name: Create Environment
-      run: conda create --name rustmix python=3.12
+      run: conda create --name rustmix python=3.12 -y
 
     - name: Activate Env
       run: |
