@@ -33,9 +33,6 @@ jobs:
         source ~/.profile
         conda activate rustmix
 
-    - name: Install Dependencies from the env
-      run: conda env update --file environment.yml --name myenv
-
     - name: Install maturin
       run: pip install maturin
 
