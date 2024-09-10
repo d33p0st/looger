@@ -4,7 +4,7 @@ build-backend = "maturin"
 
 [project]
 name = "looger"
-version = "0.2"
+version = "0.3"
 description = "logging lib for python with a rust backend for faster results. Or should I say looger?"
 dependencies = ["maturin"]
 
@@ -13,4 +13,4 @@ python-source = "pysrc"
 module-name = "looger.loglib"
 
 [project.urls]
-GitHub = "https://github.com/d33pster/looger"
+GitHub = "https://github.com/d33p0st/looger"
